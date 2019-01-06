@@ -1,2 +1,2 @@
 # golang-blog
-Примеры кода с golang-blog.blogspot.com
+Примеры кода с https://golang-blog.blogspot.com
