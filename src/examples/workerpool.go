@@ -4,6 +4,7 @@ import "fmt"
 
 func worker(id int, f func(int) int, jobs <-chan int, results chan<- int) {
 	for j := range jobs {
+		fmt.Println("Worker id", id)
 		results <- f(j)
 	}
 }
