@@ -71,4 +71,13 @@ func main() {
 			}()
 		}
 	}
+
+	countS := &Count{}
+	for i := 0; i < 100; i++ {
+		<-worker.Ticket()
+		go func() {
+			countS.Inc()
+			worker.Do(countS)
+		}()
+	}
 }
