@@ -4,11 +4,11 @@ import "fmt"
 
 // Receiving from channel will wait until channel have closed
 func main() {
-	not_buffered()
+	notBuffered()
 	buffered()
 }
 
-func not_buffered() {
+func notBuffered() {
 	fmt.Println("not_buffered")
 	w := make(chan struct{})
 
