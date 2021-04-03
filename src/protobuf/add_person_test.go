@@ -3,16 +3,9 @@ package main
 import (
 	"strings"
 	"testing"
-)
 
-package main
-
-import (
-"strings"
-"testing"
-
-"github.com/golang/protobuf/proto"
-pb "github.com/protocolbuffers/protobuf/examples/tutorial"
+	"github.com/golang/protobuf/proto"
+	pb "github.com/protocolbuffers/protobuf/examples/tutorial"
 )
 
 func TestPromptForAddressReturnsAddress(t *testing.T) {
