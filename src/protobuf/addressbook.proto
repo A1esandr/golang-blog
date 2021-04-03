@@ -1,5 +1,7 @@
 syntax = "proto3";
-package tutorial;
+package addressbook;
+
+option go_package = "addressbookpb";
 
 message Person {
   string name = 1;
