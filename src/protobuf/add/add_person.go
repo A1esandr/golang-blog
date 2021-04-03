@@ -9,8 +9,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/golang/protobuf/proto"
-	pb "github.com/protocolbuffers/protobuf/examples/tutorial"
+	pb "abadd/addressbookpb"
+	"google.golang.org/protobuf/proto"
 )
 
 func promptForAddress(r io.Reader) (*pb.Person, error) {
@@ -46,6 +46,9 @@ func promptForAddress(r io.Reader) (*pb.Person, error) {
 		fmt.Print("Enter a phone number (or leave blank to finish): ")
 		phone, err := rd.ReadString('\n')
 		if err != nil {
+			if err.Error() == "EOF" {
+				break
+			}
 			return p, err
 		}
 		phone = strings.TrimSpace(phone)

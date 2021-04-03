@@ -1,4 +1,4 @@
-module addressbook
+module abadd
 
 go 1.16
 

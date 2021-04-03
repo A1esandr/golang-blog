@@ -1,11 +1,12 @@
 package main
 
 import (
+	"fmt"
 	"strings"
 	"testing"
 
-	"github.com/golang/protobuf/proto"
-	pb "github.com/protocolbuffers/protobuf/examples/tutorial"
+	pb "abadd/addressbookpb"
+	"google.golang.org/protobuf/proto"
 )
 
 func TestPromptForAddressReturnsAddress(t *testing.T) {
@@ -50,8 +51,8 @@ unknown
 	}
 	for i := 0; i < phones; i++ {
 		if !proto.Equal(got.Phones[i], want[i]) {
-			t.Errorf("want phone %q, got %q", *want[i], *got.Phones[i])
+			t.Errorf("want phone %v, got %v", *want[i], *got.Phones[i])
 		}
-
 	}
+	fmt.Println("Success")
 }
