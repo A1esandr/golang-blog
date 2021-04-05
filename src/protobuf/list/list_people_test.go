@@ -2,10 +2,11 @@ package main
 
 import (
 	"bytes"
+	"fmt"
 	"strings"
 	"testing"
 
-	pb "addressbook/list/addressbookpb"
+	pb "ablist/addressbookpb"
 )
 
 func TestWritePersonWritesPerson(t *testing.T) {
@@ -30,6 +31,7 @@ func TestWritePersonWritesPerson(t *testing.T) {
 	if got != want {
 		t.Errorf("writePerson(%s) =>\n\t%q, want %q", p.String(), got, want)
 	}
+	fmt.Println("Success")
 }
 
 func TestListPeopleWritesList(t *testing.T) {
@@ -117,4 +119,5 @@ Person ID: 1001
 				want[i])
 		}
 	}
+	fmt.Println("Success")
 }

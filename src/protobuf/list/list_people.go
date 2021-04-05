@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	pb "addressbook/list/addressbookpb"
+	pb "ablist/addressbookpb"
 	"google.golang.org/protobuf/proto"
 )
 
